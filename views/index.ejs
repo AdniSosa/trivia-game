@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TriviaOusly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>TriviaOusly</h1>
+            <p class="definition">It´s Trivia Game, Obviously!</p>
+        </header>
+        <main>
+            
+            <% if (locals.data) { %> 
+            <div class="question">
+                <p>
+                    <%= data.results[0].question %>
+                </p>
+                <p class="category">
+                    (Category: <%= data.results[0].category %>)
+                </p>
+            
+                <button class="answerbtn" type="button" name="answerbtn" onclick="window.location.href='/question'">Give me the answer</button>
+            </div>
+            
+            <% } else {  %>
+                <p class="ready">
+                    Are you ready to play?
+                </p>
+                <button class="questionbtn" type="button" name="questionbtn" onclick="window.location.href='/question'">Let´s play!</button>
+            <% }  %>
+            
+            
+            
+            
+            <% if (locals.data) { %>
+            <div class="answer">
+                <p>
+                    <span>The answer is: </span><br><%= data.results[0].correct_answer %>
+                </p>
+                <% } %>
+                
+                
+            </div>
+            <button class="nextbtn" type="button" name="nextbtn" onclick="window.location.href='/question'">Next >>></button>
+           
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".answerbtn").click(function(){
+          $(".answer").toggle();
+        });
+      });
+      
+    </script>
+
+    </body>
+</html>

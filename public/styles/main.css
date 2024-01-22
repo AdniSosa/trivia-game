@@ -1,0 +1,147 @@
+body {
+    background-color: rgba(8,36,76,255);
+    text-align: center;
+    
+}
+
+header {
+    background-color: rgba(24,7,85,255);
+    border: 3px solid rgba(127,37,216,255);
+    text-align: center;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 100px auto 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-family: Oswald, sans-serif;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.definition {
+    font-family: Kanit, sans-serif;
+    font-weight: 700;
+    color: rgba(246,205,27,255);
+    margin-top: 0px;
+    font-size: 1.2rem;
+}
+
+.question {
+    background-color: rgba(24,7,85,255);
+    border: 3px solid rgba(246,205,27,255);
+    border-radius: 20px;
+    margin: 20px;
+    width: 600px;
+    margin: 40px auto;
+}
+
+.question p {
+    color: white;
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.ready {
+    color: white;
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.questionbtn {
+    font-family: Quicksand;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    background-color: rgba(24,7,85,255);
+    border: 2px solid white;
+    padding: 5px;
+    margin: 20px;
+    font-size: 1.7rem;
+    display: block;
+    margin: 25px auto;
+}
+
+.questionbtn:hover {
+    border: 4px solid rgb(232,144,28);
+    
+}
+
+.question .category {
+    color: lightblue;
+    font-size: 1.5rem;
+}
+
+.answerbtn {
+    font-family: Quicksand;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bolder;
+    background-color: rgba(246,205,27,255);
+    border: 2px solid rgb(232,144,28);
+    padding: 5px;
+}
+
+.answerbtn:hover {
+    font-size: 1.2rem;
+  
+    
+}
+
+.answer {
+    font-family: Oswald, sans-serif;
+    color: white;
+    font-size: 2rem;
+    display: none;
+}
+
+span {
+    font-size: 2.5rem;
+    color: rgb(232,144,28);
+}
+
+.nextbtn {
+    font-family: Quicksand;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bolder;
+    background-color: rgba(246,205,27,255);
+    border: 2px solid rgb(232,144,28);
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.nextbtn:hover {
+    background-color: rgb(232,144,28);
+    border: 2px solid rgba(246,205,27,255);
+}
+
+@media (max-width:700px) {
+    .question {
+        width: 400px;
+    }
+
+    .question p{
+    font-size: 1.8rem;
+    }
+
+    .answer {
+    font-size: 1.5rem;
+
+    }
+
+    .nextbtn {
+    font-size: 1rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+
+}
