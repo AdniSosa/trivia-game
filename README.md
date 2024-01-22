@@ -1,2 +1,3 @@
 # trivia-game
-To start the server npm i to install the node modules and then nodemon index.js.
+It is a website where random trivia questions appear, connected to an API.
+It could be improved, allowing filtering by category, and giving the option to choose the correct answer from several options.
